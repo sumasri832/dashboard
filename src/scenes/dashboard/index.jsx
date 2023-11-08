@@ -7,11 +7,11 @@ import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
 import Header from "../../components/Header";
-import LineChart from "../../components/LineChart";
-import GeographyChart from "../../components/GeographyChart";
-import BarChart from "../../components/BarChart";
-import StatBox from "../../components/StateBox";
-import ProgressCircle from "../../components/ProgressCircle";
+import LineChart from "../../charts/LineChart";
+import GeographyChart from "../../charts/GeographyChart";
+import BarChart from "../../charts/BarChart";
+import StatBox from "../../charts/StateBox";
+import ProgressCircle from "../../charts/ProgressCircle";
 
 const Dashboard = () => {
   const theme = useTheme();
