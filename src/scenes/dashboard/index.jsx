@@ -1,4 +1,4 @@
-import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, Button, IconButton, Typography, useTheme, useMediaQuery } from "@mui/material";
 import { tokens } from "../../theme2";
 import { mockTransactions } from "../../mock_data/customersData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
@@ -16,6 +16,7 @@ import ProgressCircle from "../../components/ProgressCircle";
 const Dashboard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const isNonMediumScreens = useMediaQuery("(min-width: 1200px)");
 
   return (
     <Box m="20px">
@@ -45,6 +46,9 @@ const Dashboard = () => {
         gridTemplateColumns="repeat(12, 1fr)"
         gridAutoRows="140px"
         gap="20px"
+        sx={{
+          "& > div": { gridColumn: isNonMediumScreens ? undefined : "span 12" },
+        }}
       >
         {/* ROW 1 */}
         <Box
